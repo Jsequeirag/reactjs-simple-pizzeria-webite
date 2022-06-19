@@ -14,11 +14,9 @@
   margin: 20px;
   font-size: 70px;
   cursor: pointer;
+  pointer-events: fill;
 }
-.socialMedia svg :hover {
-  transform: translateY(-1px);
-  cursor: pointer;
-}
+
 .footer p {
   font-size: 15px;
   color: white;

@@ -1,8 +1,14 @@
 import React from "react";
 import "../styles/contact.css";
+import { motion } from "framer-motion";
 export default function Contact() {
   return (
-    <div className="contact">
+    <motion.div
+      className="contact"
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
+    >
       <div className="contact-left-side"></div>
       <div className="contact-right-side">
         <h1>CONTACT US</h1>
@@ -21,6 +27,6 @@ export default function Contact() {
           <button type="submit">Send message</button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,8 +1,14 @@
 import React from "react";
 import "../styles/about.css";
+import { motion } from "framer-motion";
 export default function About() {
   return (
-    <div className="about">
+    <motion.div
+      className="about"
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
+    >
       <div className="about-top"></div>
       <div className="div about-bottom">
         <h1>ABOUT US</h1>
@@ -16,6 +22,6 @@ export default function About() {
           laborum.
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
